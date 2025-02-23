@@ -215,12 +215,6 @@ main {
     }
 }
 
-.meta {
-    color: #666;
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-}
-
 /* Sidebar */
 .sidebar>div {
     width: 100%;
@@ -600,11 +594,14 @@ footer {
     .news-item {
         flex-direction: column;
     }
-
-    /* .show .menu-bars-mScreen {
-        display: block;
-        z-index: 200;
-    } */
+  .sidebar{
+    .calendar-widget{
+        .calendar-controls{
+            display: flex;
+            flex-direction: row;
+        }
+    }
+  }
 }
 
 @media screen and (max-width: 425px) {
