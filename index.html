@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleverFeed - Your Town's Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-left">
+                <div class="brand">
+                    <a href="index.html">CleverFeed</a>
+                </div>
+            </div>
+            <div class="town-select">
+                <div class="location-info">
+                    <h2 id="currentTown">Carbondale, CO</h2>
+                </div>
+            </div>
+            <div class="auth">
+                <button class="change-town"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="join-discussion"><i class="fas fa-user-plus"></i> Join the Discussion</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="navigation-tabs">
+            <button class="menu-bars-mScreen" onclick="menuShow()"><i class="fas fa-bars"></i></button>
+            <div class="menu">
+                <button class="menu-bars"><i class="fas fa-bars"></i></button>
+                <button class="tab active" data-tab="news">News</button>
+                <button class="tab" data-tab="events">Events</button>
+                <button class="tab" data-tab="discussions">Discussions</button>
+                <button class="tab" data-tab="directory">Directory</button>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <div class="main-content">
+                <section id="news-feed">
+                    <article class="news-item">
+                        <div class="news-image"
+                            style="background-image: url('https://edcircuit.com/wp-content/uploads/2025/01/SB_New_Cover-1024-x-768-px-1-1024x663.png')">
+                        </div>
+                        <div class="news-content">
+                            <h3>Carbondale Arts Hosts First Friday Opening with Local Printmaking...</h3>
+                            <p>Carbondale Arts is Kicking Off October',s First Friday with a Reception at the Launchpad
+                                Featuring two dynamic exhibition by Local...</p>
+                            <button class="join-discussion"><i class="fas fa-user-plus"></i> Join the
+                                Discussion</button>
+                        </div>
+                    </article>
+                    <!-- More news items would be dynamically added here -->
+                    <article class="news-item">
+                        <div class="news-image"
+                            style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfXK5SdikgGY6bNrnaBsEZBj8K5cJNdN28ZQ&s')">
+                        </div>
+                        <div class="news-content">
+                            <div class="meta">
+                                <span class="date">Oct 4, 2024</span>
+                            </div>
+                            <h3>Maternity care Challenge in rural Communities</h3>
+                            <p>For many, the experience of pregnancy can vary significantly. While one pregnancy may be
+                                smooth. others may bring complication such as...</p>
+                            <button class="join-discussion"><i class="fas fa-user-plus"></i> Join the
+                                Discussion</button>
+                        </div>
+                    </article>
+                    <article class="news-item">
+                        <h1 style="margin-left: 20px;text-transform: capitalize;">Our discussion topic</h1>
+                    </article>
+                    <article class="news-item">
+                        <div class="news-image"
+                            style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJsOJcmRvljnIosjvJ2Hnkkp2rZ0Gu5zSbeg&s')">
+                            <!-- <div class="news-category">Local News</div> -->
+                        </div>
+                        <div class="news-content">
+                            <div class="meta">
+                                <span class="date">Oct 4, 2024</span>
+                                <!-- <span class="author">By Town Council</span> -->
+                            </div>
+                            <h3>Maternity care Challenge in rural Communities</h3>
+                            <p>For many, the experience of pregnancy can vary significantly. While one pregnancy may be
+                                smooth. others may bring complication such as...</p>
+                            <button class="join-discussion"><i class="fas fa-user-plus"></i> Join the
+                                Discussion</button>
+                        </div>
+                    </article>
+                    <article class="news-item">
+                        <div class="news-image"
+                            style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYNGWC-B3Z444IFquHnZ1S6SjBBMm9iBW0QA&s')">
+                            <!-- <div class="news-category">Local News</div> -->
+                        </div>
+                        <div class="news-content">
+                            <div class="meta">
+                                <span class="date">Oct 4, 2024</span>
+                                <!-- <span class="author">By Town Council</span> -->
+                            </div>
+                            <h3>Maternity care Challenge in rural Communities</h3>
+                            <p>For many, the experience of pregnancy can vary significantly. While one pregnancy may be
+                                smooth. others may bring complication such as...</p>
+                            <button class="join-discussion"><i class="fas fa-user-plus"></i> Join the
+                                Discussion</button>
+                        </div>
+                    </article>
+                    <article class="news-item">
+                        <div class="news-image"
+                            style="background-image: url('https://media.licdn.com/dms/image/v2/D4E22AQHLRepzkaGUAQ/feedshare-shrink_800/feedshare-shrink_800/0/1703108572346?e=2147483647&v=beta&t=5_awQADgWmO197rdw9pK4awSITcTw2F-DVL-MI6WUIQ')">
+                            <!-- <div class="news-category">Local News</div> -->
+                        </div>
+                        <div class="news-content">
+                            <div class="meta">
+                                <span class="date">Oct 4, 2024</span>
+                                <!-- <span class="author">By Town Council</span> -->
+                            </div>
+                            <h3>Maternity care Challenge in rural Communities</h3>
+                            <p>For many, the experience of pregnancy can vary significantly. While one pregnancy may be
+                                smooth. others may bring complication such as...</p>
+                            <button class="join-discussion"><i class="fas fa-user-plus"></i> Join the
+                                Discussion</button>
+                        </div>
+                    </article>
+                </section>
+            </div>
+
+            <aside class="sidebar">
+                <div class="calendar-widget">
+                    <h3>Carbondale's alendar</h3>
+                    <div class="calendar-controls">
+                        <select id="monthSelect"></select>
+                        <button id="todayBtn">Today</button>
+                    </div>
+                    <div id="calendar"></div>
+                    <button class="pure-button">View Events</button>
+                </div>
+                <div class="cta-section">
+                    <img src="https://t4.ftcdn.net/jpg/03/08/69/75/360_F_308697506_9dsBYHXm9FwuW0qcEqimAEXUvzTwfzwe.jpg"
+                        alt="">
+
+                    <div class="content_cta">
+                        <h2>Stay Connected to your <br>Neighbours!</h2>
+                        <button class="join-discussion"><i class="fas fa-user-plus"></i> Join the Discussion</button>
+                    </div>
+                </div>
+                <div class="cta-section org">
+                    <img src="https://static.wixstatic.com/media/c31560_8cc60e7c688647e291b4cecca51a141b~mv2.png/v1/fill/w_480,h_480,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/1679151997356.png"
+                        alt="">
+                    <div class="content">
+                        <h1>33</h1>
+                        <h2>Contributing Organizations</h2>
+                    </div>
+                </div>
+                <div class="cta-section spirit">
+                    <h1>SPIRIT STORE</h1>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlg1uJSWpMOXfYvcYgQXHBlrcqgexzVNQ58g&s"
+                        alt="">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlg1uJSWpMOXfYvcYgQXHBlrcqgexzVNQ58g&s"
+                        alt="">
+                </div>
+
+        </div>
+
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CleverFeed - Connecting with us & join-discussion</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
